@@ -33,7 +33,7 @@ export default function CharacterList(props) {
   return (
     <section className="character-list">
       {characters.map(character => {
-        return <NameTitle>{character.name}</NameTitle>
+        return <CharacterCard>{character.name}</CharacterCard>
       })}
     </section>
   );
