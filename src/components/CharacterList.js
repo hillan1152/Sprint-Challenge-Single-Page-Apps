@@ -2,6 +2,16 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
 
+import styled from "styled-components";
+
+const NameTitle = styled.h1`
+  color: red;
+  font-weight: bold;
+  font-size: 30px;
+
+`;
+
+
 export default function CharacterList(props) {
   // TODO: Add useState to track data from useEffect
   const [characters, setCharacters] = useState([])
@@ -23,7 +33,7 @@ export default function CharacterList(props) {
   return (
     <section className="character-list">
       {characters.map(character => {
-        return <h1>{character.name}</h1>
+        return <NameTitle>{character.name}</NameTitle>
       })}
     </section>
   );
